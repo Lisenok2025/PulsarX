@@ -1,17 +1,5 @@
 local supportedGames    = {}
 
-supportedGames.FALLEN = {
-
-      placeIDs          = { 13800717766; 15479377118; 16849012343; };
-      gitPath           = 'FalosSurvival';
-
-      gameName          = 'Falos Survival';
-      status            = 'javodolaz';
-      executors         = { 'Wavelon'; 'Swin'; 'Volti'; 'Siliwir'; 'Madiumpizdadium'; 'Velic'; };
-      customMessage     = {
-            ['executor']       = 'valeraidinahui';
-      };
-};
 supportedGames.TRIDENT = {
 
       placeIDs          = { 13253735473; };
@@ -19,28 +7,24 @@ supportedGames.TRIDENT = {
 
       gameName          = 'Trident Survival';
       status            = 'Undetected';
-      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; 'Madium'; 'Mаdium'; };
+      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; 'Madium'; 'Madium'; };
       customMessage     = {
-            ['executor']       = 'Сегодня праздник! сегодня сдохла твоя мать';
-      };
-};
-supportedGames.LONE = {
-
-      placeIDs          = { 13800223141; 139307005148921; 133421733370779; 4712109542; };
-      gitPath           = 'longnecksurvival';
-
-      gameName          = 'Lone Survival';
-      status            = 'vodolaz';
-      executors         = { 'WaWaWaWa'; 'Swin'; 'Velocicya'; 'Pitissium'; 'Siliwir'; 'Velic'; 'Voltoren'; 'Madium'; 'pidorum'; };
-      customMessage     = {
-            ['Madium']         = 'eblan?';
-            ['executor']       = 'PIZDAAAAAAAAAAAAAAAA';
+            ['Madium']         = '💯 Полностью поддерживается';
+            ['Wave']           = '🚀 Рекомендуемый экзекутор';
+            ['executor']       = '❓ Неизвестный экзекутор';
       };
 };
 
--- WAVE HOTFIX
 if (type(getgenv) == 'function' and getgenv().setfflag == nil) then
       getgenv().setfflag = function() end;
 end;
 
 return supportedGames;
+
+local executorName = getexecutorname() or 'Unknown';
+local gameData = supportedGames[gameName];
+
+if gameData then
+    local message = gameData.customMessage[executorName] or gameData.customMessage['executor'] or 'No message';
+    print('Сообщение для ' .. executorName .. ': ' .. message);
+end;
