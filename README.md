@@ -1,5 +1,5 @@
 # amongus.hook
 
 ```lua
-loadstring(request({Url='https://raw.githubusercontent.com/mainstreamed/amongus-hook/main/mainloader.lua',Method='GET'}).Body)();
+loadstring(request({Url='https://raw.githubusercontent.com/Lisenok2025/PulsarX/main/mainloader.lua',Method='GET'}).Body)();
 ```
