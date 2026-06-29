@@ -5,13 +5,11 @@ supportedGames.FALLEN = {
       placeIDs          = { 13800717766; 15479377118; 16849012343; };
       gitPath           = 'fallensurvival';
 
-      gameName          = 'Fallen Survival';
-      status            = 'Undetected';
-      executors         = { 'Wave'; 'Swift'; 'Volt'; 'Seliware'; 'Madium'; 'Volcano'; };
+      gameName          = 'Falos Survival';
+      status            = 'javodolaz';
+      executors         = { 'Wavelon'; 'Swin'; 'Volti'; 'Siliwir'; 'Madiumpizdadium'; 'Velic'; };
       customMessage     = {
-            ['Synapse Z']      = 'Use at own risk';
-            ['Potassium']      = 'Use at own risk';
-            ['executor']      = 'custom message';
+            ['executor']       = 'valeraidinahui';
       };
 };
 supportedGames.TRIDENT = {
@@ -21,23 +19,22 @@ supportedGames.TRIDENT = {
 
       gameName          = 'Trident Survival';
       status            = 'Undetected';
-      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; 'madium'; };
+      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; 'Madium'; 'Mаdium'; };
       customMessage     = {
-            idinaxui
-            ['executor']      = 'custom message';
+            ['executor']       = 'Сегодня праздник! сегодня сдохла твоя мать';
       };
 };
 supportedGames.LONE = {
 
       placeIDs          = { 13800223141; 139307005148921; 133421733370779; 4712109542; };
-      gitPath           = 'lonesurvival';
+      gitPath           = 'longnecksurvival';
 
       gameName          = 'Lone Survival';
-      status            = 'Undetected';
-      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; };
+      status            = 'vodolaz';
+      executors         = { 'WaWaWaWa'; 'Swin'; 'Velocicya'; 'Pitissium'; 'Siliwir'; 'Velic'; 'Voltoren'; 'Madium'; 'pidorum'; };
       customMessage     = {
-
-            ['executor']      = 'custom message';
+            ['Madium']         = 'eblan?';
+            ['executor']       = 'PIZDAAAAAAAAAAAAAAAA';
       };
 };
 
