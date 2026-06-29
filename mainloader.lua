@@ -75,14 +75,14 @@ end;
 
 local placeID           = game.PlaceId;
 local gameID			= game.GameId;
-local GITHUB_REPO       = 'https://raw.githubusercontent.com/mainstreamed/amongus-hook/refs/heads/main/';
+local GITHUB_REPO       = 'https://raw.githubusercontent.com/Lisenok2025/PulsarX/refs/heads/main/';
 
 local supportedGames    = protectedLoad(`{GITHUB_REPO}supportedGames.lua`);
 local requiredIndexes   = { placeIDs = 'table'; executors = 'table'; customMessage = 'table' };
 
 local runOnGame = function( gameInfo )
 
-      -- bad info
+      -- 
       if (type(gameInfo) ~= 'table') then
             return false;
       end;
@@ -92,21 +92,14 @@ local runOnGame = function( gameInfo )
             end;
       end;
 
-      -- actual loader
+      
       if (
 			not table.find(gameInfo.placeIDs, placeID) and
 			not table.find(gameInfo.placeIDs, gameID)
-		) then -- identifying game
+		) then 
             return false;
 
-      elseif (gameInfo.status ~= 'Undetected' and protectedMessagebox(`{gameInfo.gameName} is Currently Marked as {gameInfo.status}!\n\nAre You Sure You Want to Continue?`, `amongus.hook`, 52) ~= 6) then
-            return true;
 
-      elseif (gameInfo.customMessage[executor] and protectedMessagebox(`Unstable Executor!\n\n{executor} is is marked as {gameInfo.customMessage[executor]} for {gameInfo.gameName}\n\nAre You Sure You Want to Continue?`, `amongus.hook [{executor}]`, 52) ~= 6) then
-            return true;
-
-      elseif (not gameInfo.customMessage[executor] and not table.find(gameInfo.executors, executor) and protectedMessagebox(`Unsupported Executor!\n\n{executor} is not Officially Supported for {gameInfo.gameName}\nand may have Undefined Behaviour or even result in a BAN!\n\nAre You Sure You Want to Continue?`, `amongus.hook [{executor}]`, 52) ~= 6 ) then
-            return true;
       end;
 
       protectedLoad(`{GITHUB_REPO}{gameInfo.gitPath}/main.lua`);
@@ -120,4 +113,3 @@ for _, gameInfo in supportedGames do
       end;
 end;
 
-protectedMessagebox(`This Game is Unsupported!\n\nIf you believe this is incorrect, please create a bug-report in our discord! - discord.gg/2jycAcKvdw`, `amongus.hook [{placeID}]`, 48);
