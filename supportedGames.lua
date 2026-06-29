@@ -21,9 +21,9 @@ supportedGames.TRIDENT = {
 
       gameName          = 'Trident Survival';
       status            = 'Undetected';
-      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; };
+      executors         = { 'Wave'; 'Swift'; 'Velocity'; 'Potassium'; 'Seliware'; 'Volcano'; 'Volt'; 'madium'; };
       customMessage     = {
-
+            idinaxui
             ['executor']      = 'custom message';
       };
 };
