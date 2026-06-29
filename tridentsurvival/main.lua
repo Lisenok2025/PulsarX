@@ -5,12 +5,14 @@ if (not localplayer) then
       localplayer = players.LocalPlayer;
 end;
 
+
 local GITHUB_REPO = 'https://raw.githubusercontent.com/Lisenok2025/PulsarX/refs/heads/main/';
 
 local source = game:HttpGet(`{GITHUB_REPO}tridentsurvival/obfuscated.lua`);
 if (getgenv and getgenv().DEBUG_PULSARX) then
       source = `getgenv().DEBUG_PULSARX = true;\n{source}`;
 end;
+
 
 local drawingActorFix = loadstring(game:HttpGet(`{GITHUB_REPO}assets/trident/actorDrawingFix.lua`))();
 
@@ -24,6 +26,7 @@ source = string.format([==[
       end;
       
 ]==], drawingActorFix) .. source;
+
 
 local fastflag = getfflag and getfflag('DebugRunParallelLuaOnMainThread');
 if (fastflag == 'true' or fastflag == 'True' or fastflag == true) then
